@@ -1,0 +1,11 @@
+[
+  "NLME_CURVE_ID",
+  "COSMIC_ID",
+  "DRUG_ID",
+  "COMPANY_ID",
+  "MIN_CONC",
+  "MAX_CONC",
+  "AUC",
+  "RMSE",
+  "Z_SCORE"
+]

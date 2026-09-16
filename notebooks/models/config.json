@@ -1,0 +1,6 @@
+{
+  "target": "LN_IC50",
+  "threshold_research_only": 3.254059076309204,
+  "model_type": "Dense Neural Network",
+  "warning": "Research/education only; not clinical decision support."
+}
