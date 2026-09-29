@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnn-project"
+version = "1.0.0"
+description = "CIFAR-10 image classification with CNN and transfer learning (TensorFlow)"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+# matplotlib.use("Agg") باید قبل از import کردن pyplot اجرا شود
+"src/cnn_project/*.py" = ["E402"]

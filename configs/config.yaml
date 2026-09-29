@@ -1,0 +1,26 @@
+# تنظیمات کلی پروژه؛ همه‌ی هایپرپارامترها اینجا مدیریت می‌شوند
+seed: 42
+
+data:
+  validation_split: 0.1
+  batch_size: 64
+
+model:
+  name: custom_cnn          # گزینه‌ها: custom_cnn | mobilenet_v2
+  input_shape: [32, 32, 3]
+  num_classes: 10
+  dropout: 0.4
+  pretrained: true          # فقط برای mobilenet_v2 (وزن‌های ImageNet)
+  transfer_image_size: 96   # اندازه‌ی ورودی backbone در یادگیری انتقالی
+
+training:
+  epochs: 40
+  learning_rate: 0.001
+  early_stopping_patience: 8
+  fine_tune:                # فقط برای mobilenet_v2
+    epochs: 10
+    learning_rate: 0.00001
+    unfreeze_layers: 30
+
+paths:
+  artifacts_dir: artifacts

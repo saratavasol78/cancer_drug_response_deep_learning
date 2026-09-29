@@ -1,0 +1,9 @@
+tensorflow>=2.15
+numpy
+matplotlib>=3.6
+pillow
+pyyaml
+scikit-learn
+fastapi
+uvicorn
+python-multipart
